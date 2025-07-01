@@ -1,0 +1,46 @@
+name: Bug Report
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug"]
+assignees:
+  - rgryta
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      placeholder: The application crashed and ...
+    validations:
+      required: true
+  - type: textarea
+    id: what-should-happen
+    attributes:
+      label: What should have happened?
+      placeholder: The application should have ...
+    validations:
+      required: true
+  - type: textarea
+    id: what-steps
+    attributes:
+      label: Steps to reproduce
+      description: Tell us what did you click.
+      placeholder: 1. I clicked ...
+    validations:
+      required: true
+  - type: dropdown
+    id: system
+    attributes:
+      label: System
+      description: Which system are you using?
+      options:
+        - Android
+        - iOS
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output.
+      render: shell
